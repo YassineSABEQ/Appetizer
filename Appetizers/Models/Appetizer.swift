@@ -20,6 +20,10 @@ struct Appetizer: Decodable, Identifiable {
 
 struct AppetizerResponse: Decodable {
     let response: [Appetizer]
+    
+    enum CodingKeys: String, CodingKey {
+        case response = "request"
+    }
 }
 
 struct MockData {
