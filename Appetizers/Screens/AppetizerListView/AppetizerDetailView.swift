@@ -29,39 +29,19 @@ struct AppetizerDetailView: View {
                     .padding()
                 
                 HStack (spacing: 30) {
-                    VStack (spacing: 6) {
-                        Text("Calories")
-                            .fontWeight(.regular)
-                        Text("700")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                    }
-                    VStack (spacing: 6) {
-                        Text("Calories")
-                            .fontWeight(.regular)
-                        Text("700")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                    }
-                    VStack (spacing: 6) {
-                        Text("Calories")
-                            .fontWeight(.regular)
-                        Text("700")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                    }
+                    NutritionInfo(title: "Calories",
+                                  value: appetizer.calories)
+                    NutritionInfo(title: "Carbs",
+                                  value: appetizer.carbs)
+                    NutritionInfo(title: "Protein",
+                                  value: appetizer.protein)
                 }
                 .padding(33)
                 Spacer()
                 Button {
                     
                 } label : {
-                    Text("\(appetizer.price, specifier: "%.2f") $ - Add To Order")
-                        .frame(width: 280, height: 50)
-                        .background(Color("brandPrimary"))
-                        .font(.system(size: 20, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                    APButton(title: "\(appetizer.price, specifier: "%.2f") $ - Add To Order")
                 }
                 }
             .padding(.bottom,30)
@@ -73,17 +53,7 @@ struct AppetizerDetailView: View {
         .overlay(Button {
             isShowingDetail = false
         } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.white)
-                    .opacity(0.6)
-                
-                Image(systemName: "xmark")
-                    .imageScale(.small)
-                    .frame(width: 44, height: 44)
-                    .foregroundColor(.black)
-            }
+            XDismissButton()
         },
                  alignment: .topTrailing)
     }
@@ -93,5 +63,20 @@ struct AppetizerDetailView_Previews: PreviewProvider {
     static var previews: some View {
         AppetizerDetailView(appetizer: MockData.sampleAppetizer,
                             isShowingDetail: .constant(true))
+    }
+}
+
+struct NutritionInfo: View {
+    let title: String
+    let value: Int
+    
+    var body: some View {
+        VStack (spacing: 6) {
+            Text(title)
+                .fontWeight(.regular)
+            Text("\(value)")
+                .foregroundColor(.secondary)
+                .fontWeight(.semibold)
+        }
     }
 }
