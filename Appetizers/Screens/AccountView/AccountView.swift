@@ -11,10 +11,6 @@ struct AccountView: View {
     
     @StateObject var viewModel = AccountViewViewModel()
     
-    enum FormTextField {
-        case firstName, lastName, email
-    }
-    
     var body: some View {
         NavigationView {
             Form {
@@ -45,6 +41,9 @@ struct AccountView: View {
                 .tint(Color("brandPrimary"))
             }
             .navigationTitle("🤣 Account") 
+        }
+        .onAppear {
+            viewModel.retrieveUser()
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
