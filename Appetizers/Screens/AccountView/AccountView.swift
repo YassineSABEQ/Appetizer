@@ -40,7 +40,7 @@ struct AccountView: View {
                 }
                 .tint(Color("brandPrimary"))
             }
-            .navigationTitle("🤣 Account") 
+            .navigationTitle("👱‍♂️ Account")
         }
         .onAppear {
             viewModel.retrieveUser()
