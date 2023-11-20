@@ -13,9 +13,10 @@ struct AppetizerListView: View {
     
     var body: some View {
         ZStack {
-            NavigationStack {
+            NavigationView {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+                        .listRowSeparator(.hidden)
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetails = true
@@ -25,7 +26,9 @@ struct AppetizerListView: View {
                 .disabled(viewModel.isShowingDetails)
             }
             
-            .onAppear {
+            // Similar to onAppear, benefits of task, it puts you in async context, which means you can use your async await code and what happens if the user ,avigates away from the screen before the newtork call complets, it automatically cancels the network call
+            // basically tailor made for making a newtwork call before the view appears
+            .task {
                 viewModel.getAppetizers()
             }
             .blur(radius: viewModel.isShowingDetails ? 20 : 0)

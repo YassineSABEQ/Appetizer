@@ -7,7 +7,8 @@
 
 import Foundation
 
-final class AppetizerListViewModel: ObservableObject {
+// by marking this view model @MainActor, anything that happens in this view model that's ui-related will be rerouted to the main thread, it's the equivalent of DispatchQueue.main.async
+@MainActor final class AppetizerListViewModel: ObservableObject {
     
    @Published var appetizers: [Appetizer] = []
    @Published var alertItem: AlertItem?
@@ -17,24 +18,28 @@ final class AppetizerListViewModel: ObservableObject {
     
     func getAppetizers() {
         isLoading = true
-        NetworkManager.shared.getAppetizers { result in
-            DispatchQueue.main.async {
-                self.isLoading = false
-                switch result {
-                case let .success(response):
-                    self.appetizers = response
-                case let .failure(error):
-                    switch error {
-                    case .invalidData :
-                        self.alertItem = AlertContext.invalidData
-                    case .invalidResponse :
-                        self.alertItem = AlertContext.invalidResponse
-                    case .invalidURL :
+        
+        // or you can add async to the end of the function signature
+        Task {
+            do {
+                self.appetizers = try await NetworkManager.shared.getAppetizers()
+                isLoading = false
+            } catch {
+                if let apiError = error as? APIError {
+                    switch apiError {
+                    case .invalidURL:
                         self.alertItem = AlertContext.invalidURL
-                    case .unableToComplete :
+                    case .invalidResponse:
+                        self.alertItem = AlertContext.invalidResponse
+                    case .invalidData:
+                        self.alertItem = AlertContext.invalidData
+                    case .unableToComplete:
                         self.alertItem = AlertContext.unableToComplete
                     }
+                } else {
+                    self.alertItem = AlertContext.invalidResponse
                 }
+                isLoading = false
             }
         }
     }

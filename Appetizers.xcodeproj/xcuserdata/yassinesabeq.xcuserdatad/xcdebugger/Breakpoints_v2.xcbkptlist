@@ -3,4 +3,102 @@
    uuid = "3083265D-DB69-494A-9544-6CDC3A41C722"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3ED406E5-4490-42AD-BBE3-853B4F672556"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Screens/AccountView/AccountViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "saveChanges()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "164B5A92-B7BE-4A01-95ED-A8F6003234A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Screens/AccountView/AccountViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "saveChanges()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C93849B-3EA7-4F94-80FE-941981C4E4EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Screens/AccountView/AccountViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "saveChanges()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "530F8ED7-24AD-40A3-B6F1-CFA83241F352"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Screens/AccountView/AccountView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "530F8ED7-24AD-40A3-B6F1-CFA83241F352 - 2390cc9a0200fb14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.disableAutocorrection(Swift.Optional&lt;Swift.Bool&gt;) -&gt; some&gt;&gt;.0, SwiftUI.DatePicker&lt;SwiftUI.Text&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.disableAutocorrection(Swift.Optional&lt;Swift.Bool&gt;) -&gt; some&gt;&gt;.0, SwiftUI.DatePicker&lt;SwiftUI.Text&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;, SwiftUI.EmptyView&gt;, &lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in Appetizers.AccountView.body.getter : some"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yassinesabeq/Documents/Appetizers/Appetizers/Screens/AccountView/AccountView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "530F8ED7-24AD-40A3-B6F1-CFA83241F352 - 124adc98162f92b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.disableAutocorrection(Swift.Optional&lt;Swift.Bool&gt;) -&gt; some&gt;&gt;.0, SwiftUI.DatePicker&lt;SwiftUI.Text&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.submitLabel(SwiftUI.SubmitLabel) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.disableAutocorrection(Swift.Optional&lt;Swift.Bool&gt;) -&gt; some&gt;&gt;.0, SwiftUI.DatePicker&lt;SwiftUI.Text&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;, SwiftUI.EmptyView&gt;, &lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in Appetizers.AccountView.body.getter : some"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yassinesabeq/Documents/Appetizers/Appetizers/Screens/AccountView/AccountView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
