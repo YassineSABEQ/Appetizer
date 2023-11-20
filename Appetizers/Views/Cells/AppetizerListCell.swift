@@ -13,11 +13,18 @@ struct AppetizerListCell: View {
     
     var body: some View {
         HStack {
-            AppetizerRemoteImage(urlString: appetizer.imageURL)
-//            Image("asian-flank-steak")
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120.0, height: 90.0)
-                .cornerRadius(8)
+            // if caching is important, we use the following AppetizerRemoteImage
+            //            AppetizerRemoteImage(urlString: appetizer.imageURL)
+            
+            // available in iOS 15, if caching is not important, we use AsyncImage
+            AsyncImage(url: URL(string: appetizer.imageURL)) { image in
+                image
+                    .resizable()
+            } placeholder: {
+                Image("food-placeholder")
+                    .resizable()
+            }
+            .modifier(ListCellImageStyle())
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(appetizer.name)
